@@ -62,6 +62,6 @@ func (repo *Goods) New(name, tag string, price, stock int) (entityGoods *entity.
 		return
 	}
 	entityGoods = &entity.Goods{Goods: goods}
-	repo.MadeEntity(entityGoods)
+	repo.InjectEntity(entityGoods)
 	return
 }
